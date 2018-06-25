@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC
+    "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
+    "https://checkstyle.org/dtds/configuration_1_3.dtd">
+
+<module name="Checker">
+    <property name="charset" value="UTF-8"/>
+    <property name="fileExtensions" value="java"/>
+    <property name="severity" value="warning"/>
+
+
+    <!-- Misc checks -->
+
+    <!-- http://checkstyle.sourceforge.net/config_misc.html#NewlineAtEndOfFile -->
+    <module name="NewlineAtEndOfFile">
+        <property name="lineSeparator" value="lf"/>
+    </module>
+
+
+    <!-- Size violation checks -->
+
+    <!-- http://checkstyle.sourceforge.net/config_sizes.html#FileLength -->
+    <module name="FileLength"/>
+
+
+    <!-- Whitespace checks -->
+
+    <!-- http://checkstyle.sourceforge.net/config_whitespace.html#FileTabCharacter -->
+    <module name="FileTabCharacter"/>
+
+
+    <module name="TreeWalker">
+        <!-- Annotation checks -->
+
+        <!-- http://checkstyle.sourceforge.net/config_annotation.html#AnnotationLocation -->
+        <module name="AnnotationLocation"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_annotation.html#AnnotationUseStyle -->
+        <module name="AnnotationUseStyle"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_annotation.html#MissingDeprecated -->
+        <module name="MissingDeprecated"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_annotation.html#MissingOverride -->
+        <module name="MissingOverride"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_annotation.html#PackageAnnotation -->
+        <module name="PackageAnnotation"/>
+
+
+        <!-- Block checks -->
+
+        <!-- http://checkstyle.sourceforge.net/config_blocks.html#AvoidNestedBlocks -->
+        <module name="AvoidNestedBlocks"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_blocks.html#EmptyBlock -->
+        <module name="EmptyBlock">
+            <property name="option" value="text"/>
+        </module>
+
+        <!-- http://checkstyle.sourceforge.net/config_blocks.html#EmptyCatchBlock -->
+        <module name="EmptyCatchBlock">
+            <property name="commentFormat" value="Intentionally left empty"/>
+            <property name="exceptionVariableName" value="expected|ignored"/>
+        </module>
+
+        <!-- http://checkstyle.sourceforge.net/config_blocks.html#LeftCurly -->
+        <module name="LeftCurly">
+            <property name="ignoreEnums" value="false"/>
+        </module>
+
+        <!-- http://checkstyle.sourceforge.net/config_blocks.html#NeedBraces -->
+        <module name="NeedBraces"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_blocks.html#RightCurly -->
+        <module name="RightCurly"/>
+
+
+        <!-- Class design checks -->
+
+        <!-- http://checkstyle.sourceforge.net/config_design.html#FinalClass -->
+        <module name="FinalClass"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_design.html#HideUtilityClassConstructor -->
+        <module name="HideUtilityClassConstructor"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_design.html#InnerTypeLast -->
+        <module name="InnerTypeLast"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_design.html#InterfaceIsType -->
+        <module name="InterfaceIsType"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_design.html#OneTopLevelClass -->
+        <module name="OneTopLevelClass"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_design.html#VisibilityModifier -->
+        <module name="VisibilityModifier">
+            <property name="packageAllowed" value="true"/>
+            <property name="protectedAllowed" value="true"/>
+            <!-- Maven plugin only support 6.18, this requires 7.0 -->
+            <!--<property name="allowPublicFinalFields" value="true"/>-->
+            <property name="allowPublicImmutableFields" value="true"/>
+        </module>
+
+
+        <!-- Coding checks -->
+
+        <!-- http://checkstyle.sourceforge.net/config_coding.html#ArrayTrailingComma -->
+        <module name="ArrayTrailingComma"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_coding.html#AvoidInlineConditionals -->
+        <module name="AvoidInlineConditionals"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_coding.html#CovariantEquals -->
+        <module name="CovariantEquals"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_coding.html#DeclarationOrder -->
+        <module name="DeclarationOrder"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_coding.html#DefaultComesLast -->
+        <module name="DefaultComesLast"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_coding.html#EmptyStatement -->
+        <module name="EmptyStatement"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_coding.html#EqualsAvoidNull -->
+        <module name="EqualsAvoidNull"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_coding.html#EqualsHashCode -->
+        <module name="EqualsHashCode"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_coding.html#ExplicitInitialization -->
+        <module name="ExplicitInitialization">
+            <!-- Maven plugin only support 6.18, this requires 7.8 -->
+            <!--<property name="onlyObjectReferences" value="true"/>-->
+        </module>
+
+        <!-- http://checkstyle.sourceforge.net/config_coding.html#FallThrough -->
+        <module name="FallThrough">
+            <property name="checkLastCaseGroup" value="true"/>
+        </module>
+
+        <!-- http://checkstyle.sourceforge.net/config_coding.html#IllegalCatch -->
+        <module name="IllegalCatch"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_coding.html#IllegalInstantiation -->
+        <module name="IllegalInstantiation">
+            <property name="classes" value="Boolean, java.lang.Boolean"/>
+        </module>
+
+        <!-- http://checkstyle.sourceforge.net/config_coding.html#IllegalThrows -->
+        <module name="IllegalThrows"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_coding.html#IllegalToken -->
+        <module name="IllegalToken"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_coding.html#IllegalType -->
+        <module name="IllegalType"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_coding.html#InnerAssignment -->
+        <module name="InnerAssignment"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_coding.html#MissingSwitchDefault -->
+        <module name="MissingSwitchDefault"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_coding.html#ModifiedControlVariable -->
+        <module name="ModifiedControlVariable"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_coding.html#MultipleStringLiterals -->
+        <module name="MultipleStringLiterals">
+            <property name="allowedDuplicates" value="2"/>
+        </module>
+
+        <!-- http://checkstyle.sourceforge.net/config_coding.html#MultipleVariableDeclarations -->
+        <module name="MultipleVariableDeclarations"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_coding.html#NestedForDepth -->
+        <module name="NestedForDepth"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_coding.html#NestedIfDepth -->
+        <module name="NestedIfDepth">
+            <property name="max" value="3"/>
+        </module>
+
+        <!-- http://checkstyle.sourceforge.net/config_coding.html#NestedTryDepth -->
+        <module name="NestedTryDepth">
+            <property name="max" value="2"/>
+        </module>
+
+        <!-- http://checkstyle.sourceforge.net/config_coding.html#NoClone -->
+        <module name="NoClone"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_coding.html#OneStatementPerLine -->
+        <module name="OneStatementPerLine"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_coding.html#OverloadMethodsDeclarationOrder -->
+        <module name="OverloadMethodsDeclarationOrder"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_coding.html#PackageDeclaration -->
+        <module name="PackageDeclaration"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_coding.html#ParameterAssignment -->
+        <module name="ParameterAssignment"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_coding.html#RequireThis -->
+        <module name="RequireThis"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_coding.html#SimplifyBooleanReturn -->
+        <module name="SimplifyBooleanReturn"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_coding.html#StringLiteralEquality -->
+        <module name="StringLiteralEquality"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_coding.html#SuperClone -->
+        <module name="SuperClone"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_coding.html#SuperFinalize -->
+        <module name="SuperFinalize"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_coding.html#UnnecessaryParentheses -->
+        <module name="UnnecessaryParentheses"/>
+
+
+        <!-- Import checks -->
+
+        <!-- http://checkstyle.sourceforge.net/config_imports.html#AvoidStarImport -->
+        <module name="AvoidStarImport">
+            <property name="allowClassImports" value="true"/>
+            <property name="allowStaticMemberImports" value="true"/>
+        </module>
+
+        <!-- http://checkstyle.sourceforge.net/config_imports.html#IllegalImport -->
+        <module name="IllegalImport"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_imports.html#RedundantImport -->
+        <module name="RedundantImport"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_imports.html#UnusedImports -->
+        <module name="UnusedImports"/>
+
+
+        <!-- JavaDoc checks -->
+
+        <!-- http://checkstyle.sourceforge.net/config_javadoc.html#AtclauseOrder -->
+        <module name="AtclauseOrder"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_javadoc.html#JavadocMethod -->
+        <module name="JavadocMethod">
+            <property name="scope" value="public"/>
+            <property name="allowUndeclaredRTE" value="true"/>
+            <property name="allowMissingPropertyJavadoc" value="true"/>
+        </module>
+
+        <!-- http://checkstyle.sourceforge.net/config_javadoc.html#JavadocParagraph -->
+        <module name="JavadocParagraph">
+            <property name="allowNewlineParagraph" value="false"/>
+        </module>
+
+        <!-- http://checkstyle.sourceforge.net/config_javadoc.html#JavadocStyle -->
+        <module name="JavadocStyle">
+            <property name="scope" value="public"/>
+            <property name="checkEmptyJavadoc" value="true"/>
+        </module>
+
+        <!-- http://checkstyle.sourceforge.net/config_javadoc.html#JavadocTagContinuationIndentation -->
+        <module name="JavadocTagContinuationIndentation"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_javadoc.html#NonEmptyAtclauseDescription -->
+        <module name="NonEmptyAtclauseDescription"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_javadoc.html#SingleLineJavadoc -->
+        <module name="SingleLineJavadoc"/>
+
+
+        <!-- Misc checks -->
+
+        <!-- http://checkstyle.sourceforge.net/config_misc.html#ArrayTypeStyle -->
+        <module name="ArrayTypeStyle"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_misc.html#AvoidEscapedUnicodeCharacters -->
+        <module name="AvoidEscapedUnicodeCharacters"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_misc.html#CommentsIndentation -->
+        <module name="CommentsIndentation"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_misc.html#Indentation -->
+        <module name="Indentation"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_misc.html#OuterTypeFilename -->
+        <module name="OuterTypeFilename"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_misc.html#TodoComment -->
+        <module name="TodoComment">
+            <property name="format" value="(TODO)|(FIXME)|(HACK)|(HOTFIX)|(QUICKFIX)"/>
+        </module>
+
+        <!-- http://checkstyle.sourceforge.net/config_misc.html#TrailingComment -->
+        <module name="TrailingComment"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_misc.html#UncommentedMain -->
+        <module name="UncommentedMain">
+            <property name="excludedClasses" value="\.Main$"/>
+        </module>
+
+        <!-- http://checkstyle.sourceforge.net/config_misc.html#UpperEll -->
+        <module name="UpperEll"/>
+
+
+        <!-- Modifier checks -->
+
+        <!-- http://checkstyle.sourceforge.net/config_modifier.html#ModifierOrder -->
+        <module name="ModifierOrder"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_modifier.html#RedundantModifier -->
+        <module name="RedundantModifier"/>
+
+
+        <!-- Naming checks -->
+
+        <!-- http://checkstyle.sourceforge.net/config_naming.html#AbstractClassName -->
+
+        <!-- http://checkstyle.sourceforge.net/config_naming.html#CatchParameterName -->
+
+        <!-- http://checkstyle.sourceforge.net/config_naming.html#ClassTypeParameterName -->
+
+        <!-- http://checkstyle.sourceforge.net/config_naming.html#ConstantName -->
+
+        <!-- http://checkstyle.sourceforge.net/config_naming.html#InterfaceTypeParameterName -->
+
+        <!-- http://checkstyle.sourceforge.net/config_naming.html#LocalFinalVariableName -->
+
+        <!-- http://checkstyle.sourceforge.net/config_naming.html#LocalVariableName -->
+
+        <!-- http://checkstyle.sourceforge.net/config_naming.html#MemberName -->
+
+        <!-- http://checkstyle.sourceforge.net/config_naming.html#MethodName -->
+
+        <!-- http://checkstyle.sourceforge.net/config_naming.html#MethodTypeParameterName -->
+
+        <!-- http://checkstyle.sourceforge.net/config_naming.html#PackageName -->
+
+        <!-- http://checkstyle.sourceforge.net/config_naming.html#ParameterName -->
+
+        <!-- http://checkstyle.sourceforge.net/config_naming.html#StaticVariableName -->
+
+        <!-- http://checkstyle.sourceforge.net/config_naming.html#TypeName -->
+
+
+        <!-- Size violation checks -->
+
+        <!-- http://checkstyle.sourceforge.net/config_sizes.html#AnonInnerLength-->
+        <module name="AnonInnerLength">
+            <property name="max" value="200"/>
+        </module>
+
+        <!-- http://checkstyle.sourceforge.net/config_sizes.html#LineLength -->
+        <module name="LineLength">
+            <property name="max" value="100"/>
+        </module>
+
+        <!-- http://checkstyle.sourceforge.net/config_sizes.html#MethodLength -->
+        <module name="MethodLength">
+            <property name="max" value="200"/>
+        </module>
+
+        <!-- http://checkstyle.sourceforge.net/config_sizes.html#OuterTypeNumber -->
+        <module name="OuterTypeNumber"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_sizes.html#ParameterNumber -->
+        <module name="ParameterNumber">
+            <property name="ignoreOverriddenMethods" value="true"/>
+        </module>
+
+
+        <!-- Whitespace checks -->
+
+        <!-- http://checkstyle.sourceforge.net/config_whitespace.html#EmptyForInitializerPad -->
+        <module name="EmptyForInitializerPad"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_whitespace.html#EmptyForIteratorPad -->
+        <module name="EmptyForIteratorPad"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_whitespace.html#EmptyLineSeparator -->
+        <module name="EmptyLineSeparator">
+            <property name="allowNoEmptyLineBetweenFields" value="true"/>
+            <property name="allowMultipleEmptyLines" value="false"/>
+            <property name="allowMultipleEmptyLinesInsideClassMembers" value="false"/>
+        </module>
+
+        <!-- http://checkstyle.sourceforge.net/config_whitespace.html#GenericWhitespace -->
+        <module name="GenericWhitespace"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_whitespace.html#MethodParamPad -->
+        <module name="MethodParamPad">
+            <property name="option" value="nospace"/>
+        </module>
+
+        <!-- http://checkstyle.sourceforge.net/config_whitespace.html#NoLineWrap -->
+        <module name="NoLineWrap"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_whitespace.html#NoWhitespaceAfter -->
+        <module name="NoWhitespaceAfter"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_whitespace.html#NoWhitespaceBefore -->
+        <module name="NoWhitespaceBefore"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_whitespace.html#OperatorWrap -->
+        <module name="OperatorWrap">
+            <property name="option" value="eol"/>
+        </module>
+
+        <!-- http://checkstyle.sourceforge.net/config_whitespace.html#ParenPad -->
+        <module name="ParenPad"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_whitespace.html#SeparatorWrap -->
+        <module name="SeparatorWrap">
+            <property name="tokens"
+                      value="COMMA, SEMI, ELLIPSIS, LPAREN, ARRAY_DECLARATOR, RBRACK"/>
+            <property name="option" value="eol"/>
+        </module>
+
+        <module name="SeparatorWrap">
+            <property name="tokens" value="DOT"/>
+            <property name="option" value="nl"/>
+        </module>
+
+        <!-- http://checkstyle.sourceforge.net/config_whitespace.html#TypecastParenPad -->
+        <module name="TypecastParenPad"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_whitespace.html#WhitespaceAfter -->
+        <module name="WhitespaceAfter"/>
+
+        <!-- http://checkstyle.sourceforge.net/config_whitespace.html#WhitespaceAround -->
+        <module name="WhitespaceAround">
+            <property name="allowEmptyConstructors" value="true"/>
+            <property name="allowEmptyMethods" value="true"/>
+            <property name="allowEmptyTypes" value="true"/>
+        </module>
+    </module>
+</module>

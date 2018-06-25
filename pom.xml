@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.aesy.checkstyle</groupId>
+    <artifactId>checkstyle-config-aesy</artifactId>
+    <version>0.0.1</version>
+    <packaging>jar</packaging>
+
+    <name>Aesys Checkstyle Config</name>
+    <description>Aesys Checkstyle Config</description>
+    <inceptionYear>2018</inceptionYear>
+    <url>https://github.com/aesy/checkstyle-config-aesy</url>
+
+    <issueManagement>
+        <url>https://github.com/aesy/checkstyle-config-aesy/issues</url>
+        <system>GitHub Issues</system>
+    </issueManagement>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://github.com/aesy/checkstyle-config-aesy</url>
+        <connection>scm:git:git://github.com/aesy/checkstyle-config-aesy.git</connection>
+        <developerConnection>scm:git:git@github.com:aesy/checkstyle-config-aesy.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>aesy</id>
+            <name>Isak Wertwein</name>
+            <email>isak.wertwein@gmail.com</email>
+            <url>https://github.com/aesy</url>
+        </developer>
+    </developers>
+
+    <contributors>
+        <contributor>
+            <url>https://github.com/aesy/bytes/graphs/contributors</url>
+        </contributor>
+    </contributors>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+</project>
