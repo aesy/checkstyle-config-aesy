@@ -72,6 +72,11 @@ Add the following plugin to your maven `pom.xml`:
             <artifactId>checkstyle-config-aesy</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.puppycrawl.tools</groupId>
+            <artifactId>checkstyle</artifactId>
+            <version>8.10.1</version>
+        </dependency>
     </dependencies>
 
     <configuration>
@@ -79,15 +84,16 @@ Add the following plugin to your maven `pom.xml`:
         
         <!-- The following parameters are optional: -->
         <consoleOutput>true</consoleOutput>
-        <failOnViolation>true</failOnViolation>
+        <failsOnError>true</failsOnError>
+        <failOnViolation>false</failOnViolation>
         <logViolationsToConsole>true</logViolationsToConsole>
-        <violationSeverity>error</violationSeverity>
+        <violationSeverity>warning</violationSeverity>
     </configuration>
     
     <executions>
         <execution>
             <id>validate</id>
-            <phase>test</phase>
+            <phase>validate</phase>
             <goals>
                 <goal>check</goal>
             </goals>
