@@ -70,7 +70,7 @@ Add the following plugin to your maven `pom.xml`:
         <dependency>
             <groupId>io.aesy.checkstyle</groupId>
             <artifactId>checkstyle-config-aesy</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>1.0.0</version>
         </dependency>
         <dependency>
             <groupId>com.puppycrawl.tools</groupId>
@@ -108,7 +108,7 @@ A IDEA configuration file will be included soon™.
 
 ## Eclipse
 
-A Eclipse configuration fille will be included sometime™.
+A Eclipse configuration file will be included sometime™.
 
 ## Contribute
 Use the [issue tracker](https://github.com/aesy/checkstyle-config-aesy/issues) to report bugs or 
